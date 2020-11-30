@@ -1,0 +1,126 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+    
+<header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+  
+      <div class="logo mr-auto">
+        <h1 class="text-light" ><a href="index.html"><span>VOIZFONICA</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+  
+      <nav class="nav-menu d-none d-lg-block">
+        <ul><br>
+          <!-- <li class="active"><a href="">View Bill</a></li> -->
+          <!-- <li class="active"><a href="">Manage Accounts</a></li> -->
+          <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotomanage(use.emailId)">||  Manage Accounts  || </button></li>
+          <!-- <li class="active"><a href="">New Connection</a></li> -->
+          <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotohis()">  Transaction History ||</button></li>
+          <li class="active"> <button id="p" type="button" class="btn btn-link" (click)="gotoserv(use.emailId)">  New Service  || </button></li>
+          <!-- <li class="active"> </li> -->
+          <li class="active"> <button id="p" type="button" class="btn btn-link" (click)="gotorecharge()">  Recharge || </button></li> 
+          <!-- <li class="active"><a href="http://localhost:4401/login">Help and Support</a></li> -->
+          <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotofaqs()">  Help  ||</button></li>
+          <!-- <li class="active"><a href="#portfolio">Services</a></li> -->
+         
+          <!-- <li class="active"><a href="http://localhost:4401/main">Logout</a></li> -->
+          <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotomain()">  Logout  ||</button></li>
+          <!-- <li class="active"><button type="submit" class="btn btn-secondary" (click)="gotomodify()">View Profile</button></li>&nbsp;&nbsp; -->
+          <!-- <li style="text-align: right;" class="active"><a  href="#" >Welcome {{use.firstName}}</a></li> -->
+          <li class="active"><button id="p" type="button" class="btn btn-secondary" (click)="gotoview()">{{use.firstName}} </button></li>
+          <!-- <li class="active"><button type="submit" class="btn btn-secondary" (click)="gotomodify()">Welcome {{use.firstName}}</button></li> -->
+        </ul>
+      </nav>
+  
+    </div>
+  </header>
+  <section id="bs-pricing-five" class="bs-pricing-five p-top-100 bg-white">
+    <div><h1>Postpaid Plans</h1></div>
+            <div class="container">
+                
+                <div class="row">
+                    <div class="bs-five-area bs-radius">
+                        <div class="col-md-3 no-padding">
+                            <div class="bs-five">
+                                <h6 class="text-uppercase">Infinity Family Plan 399</h6>
+                                <h1 class="bs-caption"><sup>Rs.</sup>399</h1>
+                                <p>No Credit Cart Needed</p>
+                                <ul>
+                                    <li><b>1 Regular SIM</b></li>
+                                    <li>40GB Per Month</li>
+                                    <li>Unlimited Local/STD/Roaming Calls</li>
+                                    <li>100 SMS per day</li>
+                                    <li>Validity:30 Days</li>
+                                    <li>24/7 Customer Support</li>
+                                    
+                                </ul>
+                                <button class="btn btn-success btn-round m-top-40" id="PO399" (click)="gotoplan('PO399')">Buy Now</button>
+                                <!-- <a href="http://localhost:4401/dongle/payment" class="btn btn-success btn-round m-top-40" id="DU499" (click)="gotoplan('DU499')" ></a>   -->
+                            </div>
+                        </div>
+                        <div class="col-md-3 no-padding">
+                            <div class="bs-five">
+                                <h6 class="text-uppercase">Infinity Family Plan 499</h6>
+                                <h1 class="bs-caption"><sup>Rs.</sup>499</h1>
+                                <p>No Credit Cart Needed</p>
+
+                                <ul>
+                                    <li><b>1 Regular SIM</b></li>
+                                    <li>75GB Per Month</li>
+                                    <li>Unlimited Local/STD/Roaming Calls</li>
+                                    <li>100 SMS per day</li>
+                                    <li>Validity:30 Days</li>
+                                    <li>24/7 Customer Support</li>
+                                </ul>
+                                <button class="btn btn-success btn-round m-top-40" id="PO499" (click)="gotoplan('PO499')">Buy Now</button>
+                                <!-- <a href="https://bootstrapthemes.co" class="btn btn-success btn-round m-top-40" id="DP799" (click)="gotoplan('DP799')">Buy Now</a>   -->
+                            </div>
+                        </div>
+                        <div class="col-md-3 no-padding">
+                            <div class="bs-five">
+                                <h6 class="text-uppercase">Family Infinity Plan 749</h6>
+                                <h1 class="bs-caption"><sup>Rs.</sup>749</h1>
+                                <p>No Credit Cart Needed</p>
+
+                                <ul>
+                                    <li><b>1 Regular SIM + 1 Family Add-ons</b></li>
+                                    <li>125GB Per Month</li>
+                                    <li>Unlimited Local/STD/Roaming Calls</li>
+                                    <li>100 SMS per day</li>
+                                    <li>Validity:30 Days</li>
+                                    <li>24/7 Customer Support</li>
+                                </ul>
+                                <button class="btn btn-success btn-round m-top-40" id="PO749" (click)="gotoplan('PO749')">Buy Now</button>
+                                <!-- <a href="https://bootstrapthemes.co" class="btn btn-success btn-round m-top-40" id="DE999" (click)="gotoplan('DE999')" >Buy Now</a>  -->
+                            </div>
+                        </div>
+                        <div class="col-md-3 no-padding">
+                            <div class="bs-five">
+                                <h6 class="text-uppercase">Family Infinity Plan 999</h6>
+                                <h1 class="bs-caption"><sup>Rs.</sup>999</h1>
+                                <p>No Credit Cart Needed</p>
+
+                                <ul>
+                                    <li><b>1 Regular SIM + 3 Family Add-ons</b></li>
+                                    <li>150GB Per Month</li>
+                                    <li>Unlimited Local/STD/Roaming Calls</li>
+                                    <li>100 SMS per day</li>
+                                    <li>Validity:30 Days</li>
+                                    <li>24/7 Customer Support</li>
+                                </ul>
+                                <button class="btn btn-success btn-round m-top-40" id="PO999" (click)="gotoplan('PO999')">Buy Now</button>
+                                <!-- <a href="https://bootstrapthemes.co" class="btn btn-success btn-round m-top-40" id="DV1499" (click)="gotoplan('DV1499')">Buy Now</a>   -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+           <!-- <div style="text-align: center;margin-top: 150px; margin-bottom:100px"> | <a href="http://bootstrapthemes.co/"target="_blank"> Snippet By Bootstrapthemes.co </a> |</div> -->
+          

@@ -1,0 +1,151 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<body>
+    
+
+<div class="container">
+    <br><br><br>
+  <form class="form-horizontal" role="form" (ngSubmit)="paynow(services.planId)">
+    <fieldset>
+      <legend style="font-size: xx-large;"><b> Payment</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+        <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+        
+        
+      <b style="text-align: right;">Product Id -  {{plan}}</b>
+    </legend>
+    <legend style="font-size: medium;">
+      <legend style="font-size: larger;font-weight: bold;">Customer Details</legend>
+      
+      <div class="form-group">
+        <label class="col-sm-3 control-label" for="card-holder-name" >EmailId</label>
+        <div class="col-sm-9">
+          <input type="email" class="form-control" name="card-holder-name"  value="{{use.emailId}}"  [(ngModel)]="services.emailId" id="card-holder-name" placeholder="Email Id">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-3 control-label" for="card-holder-name" >Mobile Number</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" name="card-holder-name" value="{{use.phoneNo}}" [(ngModel)]="services.phoneNo" id="card-holder-name" placeholder="Mobile Number">
+        </div>
+      </div>
+    </legend>
+    <legend style="font-size: medium;">
+      <legend style="font-size: larger;font-weight: bold;">Plan Details</legend>
+      <div class="form-group">
+        <label class="col-sm-3 control-label" for="card-holder-name" >Category-</label>
+        <div class="col-sm-9">
+          <select id="z" style="font-size: medium;" class="browser-default custom-select" name="gender" value="Offer" [(ngModel)]="services.cat" placeholder="Offer" >
+            <option style="font-size: medium;" value="Offer">Offer</option>
+            <option style="font-size: medium;" value="Plan">Plan</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-3 control-label" for="card-holder-name" >Type-</label>
+        <div class="col-sm-9">
+          <select id="z" style="font-size: medium;" class="browser-default custom-select" value="{{pla.type}}" name="gender"  [(ngModel)]="services.type" placeholder="Type" >
+            <option style="font-size: medium;" value="Prepaid">Prepaid</option>
+            <option style="font-size: medium;" value="Postpaid">Postpaid</option>
+            <option style="font-size: medium;" value="Dongle">Dongle</option>
+            <option style="font-size: medium;" value="AddOn">AddOn</option>
+        </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-3 control-label" for="card-holder-name">Plan Id</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" name="card-holder-name" value="{{pla.offerId}}" id="card-holder-name"  [(ngModel)]="services.planId" value="{{plan}}" placeholder="{{plan}}">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-3 control-label" for="card-holder-name">Amount</label>
+        <div class="col-sm-9">
+          <input type="number" class="form-control" name="card-holder-name" value="{{pla.amount}}" [(ngModel)]="services.amount"  id="card-holder-name" placeholder="Amount">
+        </div>
+      </div>
+     
+      </legend>
+      <legend style="font-size: medium;">
+        <legend style="font-size: larger;font-weight: bold;">Card Details</legend>
+      <div class="form-group">
+        
+        <label class="col-sm-3 control-label" for="card-holder-name">Name on Card</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" name="card-holder-name" value="{{use.firstName}}" id="card-holder-name" placeholder="Card Holder's Name">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-3 control-label" for="card-number">Card Number</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" name="card-number" id="card-number" placeholder="Debit/Credit Card Number">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-3 control-label" for="expiry-month">Expiration Date</label>
+        <div class="col-sm-9">
+          <div class="row">
+            <div class="col-xs-3">
+              <select class="form-control " name="expiry-month" id="expiry-month">
+                <option>Month</option>
+                <option value="01">Jan (01)</option>
+                <option value="02">Feb (02)</option>
+                <option value="03">Mar (03)</option>
+                <option value="04">Apr (04)</option>
+                <option value="05">May (05)</option>
+                <option value="06">June (06)</option>
+                <option value="07">July (07)</option>
+                <option value="08">Aug (08)</option>
+                <option value="09">Sep (09)</option>
+                <option value="10">Oct (10)</option>
+                <option value="11">Nov (11)</option>
+                <option value="12">Dec (12)</option>
+              </select>
+            </div>
+            <div class="col-xs-3">
+              <select class="form-control" name="expiry-year">
+                <option value="13">2020</option>
+                <option value="14">2021</option>
+                <option value="15">2022</option>
+                <option value="16">2023</option>
+                <option value="17">2024</option>
+                <option value="18">2025</option>
+                <option value="19">2026</option>
+                <option value="20">2026</option>
+                <option value="21">2027</option>
+                <option value="22">2028</option>
+                <option value="23">2029</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-3 control-label" for="cvv">Card CVV</label>
+        <div class="col-sm-3">
+          <input type="password" class="form-control" name="cvv" id="cvv" placeholder="Security Code">
+        </div>
+      </div>
+    </legend>
+      <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-9">
+          <button type="submit" class="btn btn-dark">Pay Now</button>
+        </div>
+      </div>
+      <div style="font-size: x-large;"><b style="color: brown;"><strong>{{msg}}</strong></b>
+          
+      </div>
+    </fieldset>
+  </form>
+</div>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br>
+</body>

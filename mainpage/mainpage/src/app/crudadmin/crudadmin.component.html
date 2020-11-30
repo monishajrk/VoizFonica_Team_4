@@ -1,0 +1,81 @@
+
+<header id="header" class="d-flex align-items-center">
+  <div class="container d-flex align-items-center">
+
+    <div class="logo mr-auto">
+      <h1 class="text-light" ><a href="index.html"><span>VOIZFONICA</span></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+    </div>
+
+    <nav class="nav-menu d-none d-lg-block">
+      <ul><br>
+         <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotouserdata()">||  User Data  || </button></li>
+        <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotooffers()"> Offers  || </button></li>
+       
+        <li class="active"> <button id="p" type="button" class="btn btn-link" (click)="gotochat()"> Live Chat || </button></li>
+        <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotomain()">  Logout  ||</button></li>
+          </ul>
+    </nav>
+
+  </div>
+</header>
+
+<body>
+
+ 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+<div class="container">
+  <br><br>
+    <div class="row">
+    <div class="col-md-3">
+      <div class="card-counter primary">
+        <i class="fa fa-code-fork"></i>
+        <span class="count-numbers">{{precount}}</span>
+        <span class="count-name">Prepaid Users</span>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card-counter danger">
+        <i class="fa fa-ticket"></i>
+        <span class="count-numbers">{{postcount}}</span>
+        <span class="count-name">Postpaid Users</span>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card-counter success">
+        <i class="fa fa-database"></i>
+        <span class="count-numbers">{{doncount}}</span>
+        <span class="count-name">Dongle Users</span>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card-counter info">
+        <i class="fa fa-users"></i>
+        <span class="count-numbers">{{count}}</span>
+        <span class="count-name">Users</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br><br>
+
+  <ejs-accumulationchart [title]='z' [legendSettings]='x' [tooltip]='tool' >
+    <e-accumulation-series-collection>
+    <e-accumulation-series type='Pie' [dataSource]='data' xName='name' yName='value' [dataLabel]='y' radius="80%" [palettes]='palette'> 
+      
+    </e-accumulation-series>
+    </e-accumulation-series-collection>
+  </ejs-accumulationchart>
+
+
+
+
+
+  
+</body>

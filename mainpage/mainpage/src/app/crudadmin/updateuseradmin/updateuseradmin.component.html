@@ -1,0 +1,82 @@
+
+<header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+  
+      <div class="logo mr-auto">
+        <h1 class="text-light" ><a href="index.html"><span>VOIZFONICA</span></a></h1>
+        
+      </div>
+  
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          
+         
+          <li class="active"><a href="http://localhost:4401/main">Logout</a></li>
+          
+          <li class="active"><a href="http://localhost:4401/userdata">Back</a></li>
+         
+        </ul>
+      </nav>
+  
+    </div>
+  </header>
+  
+   
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <title>Bootstrap Example</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+    
+    <div class="container">
+      <h2>Update Customer</h2>
+      <form [formGroup]="stuent"  (ngSubmit)="upUserProf(stuent.value)">
+        <div class="form-group">
+          <label for="email">Id:</label>
+          <input type="email" class="form-control" id="email" value="{{use.id}}" [(ngModel)]="id1"  formControlName="id" placeholder={{mes}} name="email">
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" value="{{use.emailId}}" [(ngModel)]="user.emailId" formControlName="email" placeholder="Enter email" name="email">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input type="password" class="form-control" id="pwd" value="{{use.password}}" [(ngModel)]="user.password" formControlName="password" placeholder="Enter password" name="pwd">
+        </div>
+        <div class="form-group">
+          <label for="pwd">FirstName:</label>
+          <input type="text" class="form-control" id="pwd" value="{{use.firstName}}" [(ngModel)]="user.firstName" formControlName="firstName" placeholder="Enter firstname" name="pwd">
+        </div>
+        <div class="form-group">
+          <label for="pwd">lastName:</label>
+          <input type="text" class="form-control" id="pwd" value="{{use.lastName}}" [(ngModel)]="user.lastName" formControlName="lastName" placeholder="Enter lastname" name="pwd">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Mobile No.:</label>
+          <input type="text" class="form-control" id="pwd" value="{{use.phoneNo}}" [(ngModel)]="user.phoneNo" formControlName="PhoneNo" placeholder="Enter mobile" name="pwd">
+        </div>
+        <div class="form-group">
+          <label for="pwd">City:</label>
+          <input type="text" class="form-control" id="pwd" value="{{use.city}}" [(ngModel)]="user.city" formControlName="city" placeholder="Enter city" name="pwd">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Pincode:</label>
+          <input type="text" class="form-control" id="pwd" value="{{use.pincode}}" [(ngModel)]="user.pincode" formControlName="pincode" placeholder="Enter pincode" name="pwd">
+        </div>
+        <button type="submit" class="btn btn-success" [disabled]="stuent.invalid" >Update</button>
+        <!-- <button type="submit" class="btn btn-success" (click)="gotoview1()">Go Back</button> -->
+      </form>
+      <br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br>
+      
+    </div>
+    
+    </body>
+    </html>

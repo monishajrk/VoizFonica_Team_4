@@ -1,0 +1,83 @@
+
+<header id="header" class="d-flex align-items-center">
+  <div class="container d-flex align-items-center">
+
+    <div class="logo mr-auto">
+      <h1 class="text-light" ><a href="index.html"><span>VOIZFONICA</span></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+    </div>
+
+    <nav class="nav-menu d-none d-lg-block">
+      <ul><br>
+        <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotomanage(use.emailId)">||  Manage Accounts  || </button></li>
+        <li class="active"> <button id="p" type="button" class="btn btn-link" (click)="gotoserv(use.emailId)">  New Service  || </button></li>
+        <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotohis()">  Transaction History ||</button></li>
+        <li class="active"> <button id="p" type="button" class="btn btn-link" (click)="gotorecharge()">  Recharge || </button></li> 
+        <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotofaqs()">  Help ||</button></li>
+        <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotomain()">  Logout  ||</button></li>
+        <li class="active"><button id="p" type="button" class="btn btn-secondary" (click)="gotoview()">  Welcome {{use.firstName}} </button></li>
+       </ul>
+    </nav>
+
+  </div>
+</header>
+  
+    <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+  
+  <div class="container">
+    <h2>Update Profile</h2>
+    <form [formGroup]="stuent"  (ngSubmit)="upUserProf(stuent.value,id1)">
+      <div class="form-group">
+        <label for="email">Id:</label>
+        <input type="email" class="form-control" id="email" value="{{use.id}}" [(ngModel)]="id1" formControlName="id" placeholder="Enter Id" name="email">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" value="{{use.emailId}}" [(ngModel)]="user.emailId" formControlName="email" placeholder="Enter email" name="email">
+      </div>
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" id="pwd" value="{{use.password}}" [(ngModel)]="user.password" formControlName="password" placeholder="Enter password" name="pwd">
+      </div>
+      <div class="form-group">
+        <label for="pwd">FirstName:</label>
+        <input type="text" class="form-control" id="pwd" value="{{use.firstName}}" [(ngModel)]="user.firstName" formControlName="firstName" placeholder="Enter FirstName" name="pwd">
+      </div>
+      <div class="form-group">
+        <label for="pwd">lastName:</label>
+        <input type="text" class="form-control" id="pwd" value="{{use.lastName}}" [(ngModel)]="user.lastName" formControlName="lastName" placeholder="Enter LastName" name="pwd">
+      </div>
+      <div class="form-group">
+        <label for="pwd">Mobile No.:</label>
+        <input type="text" class="form-control" id="pwd" value="{{use.phoneNo}}" [(ngModel)]="user.phoneNo" formControlName="PhoneNo" placeholder="Enter Mobile No." name="pwd">
+      </div>
+      <div class="form-group">
+        <label for="pwd">City:</label>
+        <input type="text" class="form-control" id="pwd" value="{{use.city}}" [(ngModel)]="user.city" formControlName="city" placeholder="Enter city" name="pwd">
+      </div>
+      <div class="form-group">
+        <label for="pwd">Pincode:</label>
+        <input type="text" class="form-control" id="pwd" value="{{use.pincode}}" [(ngModel)]="user.pincode" formControlName="pincode" placeholder="Enter Pincode" name="pwd">
+      </div>
+      <button type="submit" class="btn btn-success" [disabled]="stuent.invalid" >Update</button>
+    </form>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    
+  </div>
+  
+  </body>
+  </html>
+  

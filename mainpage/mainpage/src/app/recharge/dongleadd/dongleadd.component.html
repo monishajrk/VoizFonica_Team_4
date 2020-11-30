@@ -1,0 +1,224 @@
+
+<body>
+    <header id="header" class="d-flex align-items-center">
+        <div class="container d-flex align-items-center">
+      
+          <div class="logo mr-auto">
+            <h1 class="text-light" ><a href="index.html"><span>VOIZFONICA</span></a></h1>
+             </div>
+      
+          <nav class="nav-menu d-none d-lg-block">
+            <ul><br>
+              <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotomanage(use.emailId)">||  Manage Accounts  || </button></li>
+             
+              <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotohis()">  Transaction History ||</button></li>
+              <li class="active"> <button id="p" type="button" class="btn btn-link" (click)="gotoserv(use.emailId)">  New Service  || </button></li>
+              
+              <li class="active"> <button id="p" type="button" class="btn btn-link" (click)="gotorecharge()">  Recharge || </button></li> 
+              
+              <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotofaqs()">  Help  ||</button></li>
+              <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotomain()">  Logout  ||</button></li>
+              <li class="active"><button id="p" type="button" class="btn btn-secondary" (click)="gotoview()">{{use.firstName}} </button></li>
+             
+            </ul>
+          </nav>
+      
+        </div>
+      </header>
+    <br><hr>
+    <legend>
+    <div > <h1 style="background-color: rgb(203, 209, 209);"><strong>DONGLE PLANS</strong></h1>    </div>   
+    </legend>                  
+         
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-3 col-sm-6 col-xs-12 float-shadow">        
+                      <div class="price_table_container">
+                          <div class="price_table_heading">UNLIMITED</div>
+                          <div class="price_table_body">
+                              <div class="price_table_row cost warning-bg"><strong><h1>RS.499 </h1></strong><span><h1><strong>/MONTH</strong></h1></span></div>
+                              
+                              <div class="price_table_row">200GB INTERNET </div>
+                              <div class="price_table_row">Up to 10Mbps Speed</div>
+                              <div class="price_table_row">Validity:30 Days</div>
+                              <div class="price_table_row">24/7 Customer Support</div>
+                              <div class="price_table_row" style="height: 50px;"></div>
+
+                               </div>
+                          
+                          <button class="btn btn-success btn-round m-top-40" id="DU499" (click)="gotoplan('DU499')">Buy Now</button>
+                      </div>
+                  </div>
+          
+                  <div class="col-md-3 col-sm-6 col-xs-12 float-shadow">
+                      <div class="recommended"><strong><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> PREMIUM</strong></div>                              
+                      <div class="price_table_container">
+                          <div class="price_table_heading">PREMIUM</div>
+                          <div class="price_table_body">
+                              <div class="price_table_row cost primary-bg"><strong><h1>RS.799</h1></strong><span><h1><strong>/MONTH</strong></h1></span></div>
+                              <div class="price_table_row">500GB Internet</div>
+                              <div class="price_table_row">Up to 40Mbps Speed</div>
+                              <div class="price_table_row">Validity:30 Days</div>
+                              <div class="price_table_row">Free Music Subscription</div>
+                              <div class="price_table_row">24/7 Customer Support</div>
+                                                                           
+                          </div>
+                        
+                          <button class="btn btn-success btn-round m-top-40" id="DP799" (click)="gotoplan('DP799')">Buy Now</button>
+                      </div>
+                  </div>
+          
+                  <div class="col-md-3 col-sm-6 col-xs-12 float-shadow">        
+                      <div class="price_table_container">
+                          <div class="price_table_heading">EXCLUSIVE</div>
+                          <div class="price_table_body">
+                              <div class="price_table_row cost success-bg"><strong><h1>RS.999</h1></strong><span><h1><strong>/MONTH</strong></h1></span></div>
+                              <div class="price_table_row">Unlimited Internet</div>
+                              <div class="price_table_row">Up to 100Mbps Speed </div>
+                              <div class="price_table_row">Validity:30 Days</div>
+                              <div class="price_table_row">Free Prime Subscription</div>
+                              <div class="price_table_row">24/7 Customer Support</div>
+                               </div>
+                         
+                          <button class="btn btn-success btn-round m-top-40" id="DE999" (click)="gotoplan('DE999')">Buy Now</button>
+                      </div>
+                  </div>
+          
+                  <div class="col-md-3 col-sm-6 col-xs-12 float-shadow">        
+                      <div class="price_table_container">
+                          <div class="price_table_heading">VIP</div>
+                          <div class="price_table_body">
+                              <div class="price_table_row cost info-bg"><strong><h1>RS.1499</h1></strong><span><h1><strong>/MONTH</strong></h1></span></div>
+                              <div class="price_table_row">Unlimited Internet</div>
+                              <div class="price_table_row">Up to 1 Gbps Speed</div>
+                              <div class="price_table_row">Validity:30 Days</div>
+                              <div class="price_table_row">Free Netflix Subscription</div>
+                              <div class="price_table_row">24/7 Customer Support</div>
+                                                                         
+                          </div>
+                          <button class="btn btn-success btn-round m-top-40" id="DV1499" (click)="gotoplan('DV1499')">Buy Now</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+         
+          <div class="spacer"></div>
+         
+          <hr>
+        
+          <legend>
+            
+             <div > <h1 style="background-color: rgb(203, 209, 209);"><strong>ADD ONS</strong></h1>    </div>   
+          </legend>            
+                 
+                   <div class="container">
+                       <div class="row">
+                           <div class="col-md-3 col-sm-6 col-xs-12 float-shadow">        
+                               <div class="price_table_container">
+                                   <div class="price_table_heading">Starter</div>
+                                   <div class="price_table_body">
+                                       <div class="price_table_row cost warning-bg"><strong><h1>RS.99 ONLY</h1></strong><span><h1><strong>/MONTH</strong></h1></span></div>
+                                       <div class="price_table_row">1GB/PER DAY</div>
+                                       
+                                                                                     
+                                   </div>
+                                  
+                                   <button class="btn btn-success btn-round m-top-40" id="DA99" (click)="gotoplan('DA99')">Buy Now</button>
+                               </div>
+                           </div>
+                   
+                           <div class="col-md-3 col-sm-6 col-xs-12 float-shadow">
+                               <div class="recommended"><strong><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> RECOMMENDED</strong></div>                              
+                               <div class="price_table_container">
+                                   <div class="price_table_heading">Basic</div>
+                                   <div class="price_table_body">
+                                       <div class="price_table_row cost primary-bg"><strong><h1>RS.199 ONLY</h1></strong><span><h1><strong>/MONTH</strong></h1></span></div>
+                                       <div class="price_table_row">1.5GB/PER DAY</div>
+                                      
+                                                                               
+                                   </div>
+                                  
+                                   <button class="btn btn-success btn-round m-top-40" id="DA199" (click)="gotoplan('DA199')">Buy Now</button>
+                               </div>
+                           </div>
+                   
+                           <div class="col-md-3 col-sm-6 col-xs-12 float-shadow">        
+                               <div class="price_table_container">
+                                   <div class="price_table_heading">Premium</div>
+                                   <div class="price_table_body">
+                                       <div class="price_table_row cost success-bg"><strong><h1>RS.299 ONLY</h1></strong><span><h1><strong>/MONTH</strong></h1></span></div>
+                                       <div class="price_table_row">2GB/PER DAY</div>
+                                       
+                                                                                 
+                                   </div>
+                                   
+                                   <button class="btn btn-success btn-round m-top-40" id="DA299" (click)="gotoplan('DA299')">Buy Now</button>
+                               </div>
+                           </div>
+                   
+                           <div class="col-md-3 col-sm-6 col-xs-12 float-shadow">        
+                               <div class="price_table_container">
+                                   <div class="price_table_heading">Master</div>
+                                   <div class="price_table_body">
+                                       <div class="price_table_row cost info-bg"><strong><h1>RS.399 ONLY</h1></strong><span><h1><strong>/MONTH</strong></h1></span></div>
+                                       <div class="price_table_row">3GB/PER DAY</div>
+                                      
+                                                                                 
+                                   </div>
+                                   <button class="btn btn-success btn-round m-top-40" id="DA399" (click)="gotoplan('DA399')">Buy Now</button>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                  
+                   <div class="spacer"></div>
+                  
+                   <hr>
+                   <legend>
+                   
+                    <div > <h1 style="background-color: rgb(203, 209, 209);"><strong>OFFERS</strong></h1>    </div>   
+                 </legend> <hr>
+
+                 <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+                 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+                 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+                 
+                 
+                 <div class="container">
+                     <div class="row">
+                         
+                         
+                         <table  class="points_table" style="width: 1100px;">
+                             <thead >
+                                 <tr>
+                                     <th class="col-xs-2">Id</th>
+                             
+                                     <th class="col-xs-2">Offer_Name</th>
+                                     <th class="col-xs-2">Amount</th>
+                                     <th class="col-xs-2">Data</th>
+                                     <th class="col-xs-2">Validity</th>
+                                     <th class="col-xs-2">Actions</th>
+                                     
+                                 </tr>
+                             </thead>
+                 
+                             <tbody *ngFor="let serv of servs" >
+                 
+                                 <tr  *ngIf="serv.type=='Dongle'"  class="odd">
+                                     <td class="col-xs-2">{{serv.id}}</td>
+                                     <td class="col-xs-2">{{serv.offerName}}</td>
+                                     <td class="col-xs-2">{{serv.amount}}</td>
+                                     <td class="col-xs-2">{{serv.data}}</td>
+                                     <td class="col-xs-2">{{serv.validity}}</td>
+                                    
+                                     <td class="col-xs-2"><button type="button" class="btn btn-danger" (click)="gotoplan1(serv.offerId)">Buy</button></td>
+                                 </tr>
+                 
+                             
+                                 
+                             </tbody>
+                         </table>
+                     </div>
+                 </div>
+                 <br><br><br>
+                </body>

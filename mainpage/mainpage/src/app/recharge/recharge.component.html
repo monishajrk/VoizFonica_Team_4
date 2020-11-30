@@ -1,0 +1,72 @@
+
+    
+
+<link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+<link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'>
+<body>
+    <header id="header" class="d-flex align-items-center">
+        <div class="container d-flex align-items-center">
+      
+          <div class="logo mr-auto">
+            <h1 class="text-light" ><a href="index.html"><span>VOIZFONICA</span></a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+          </div>
+      
+          <nav class="nav-menu d-none d-lg-block">
+            <ul><br>
+              <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotomanage(use.emailId)">||  Manage Accounts  || </button></li>
+              <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotohis()">  Transaction History ||</button></li>
+              <li class="active"> <button id="p" type="button" class="btn btn-link" (click)="gotoserv(use.emailId)">  New Service  || </button></li>
+              <li class="active"> <button id="p" type="button" class="btn btn-link" (click)="gotorecharge()">  Recharge || </button></li> 
+              <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotofaqs()">  Help  ||</button></li>
+              <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotomain()">  Logout  ||</button></li>
+              <li class="active"><button id="p" type="button" class="btn btn-secondary" (click)="gotoview()">{{use.firstName}} </button></li>
+             </ul>
+          </nav>
+      
+        </div>
+      </header>
+<div>
+    <br><br>
+<div class='container-fluid mx-auto mt-5 mb-5 col-12' style="text-align: center">
+    
+    <div class="hd">Why People Believe in Us <br>Always render more and better service than <br />is expected of you, no matter what your ask may be.</div><br>
+    <div class="row" style="justify-content: center">
+        <div class="card col-md-3 col-12">
+            <div class="card-content">
+                <div class="card-body"> <img class="img" src="https://cdn.iconscout.com/icon/premium/png-256-thumb/dongle-2112727-1779020.png"/>
+                    <div class="shadow"></div>
+                    <div class="card-title"> <strong><button type="button" class="btn btn-secondary" (click)="gotodongle()"> DONGLE</button></strong> </div>
+                    <div class="card-subtitle">
+                        <p> <small class="text-muted">Best offers ,High Speed data ..24X7 customer support,featured plans</small> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card col-md-3 col-12 ml-2">
+            <div class="card-content">
+                <div class="card-body"> <img class="img" src="https://image.shutterstock.com/image-vector/grunge-black-postpaid-word-round-260nw-1764444479.jpg" />
+                    <div class="card-title"> <strong><button type="button" class="btn btn-secondary" (click)="gotopostpaid()">POSTPAID</button></strong> </div>
+                    <div class="card-subtitle">
+                        <p> <small class="text-muted">Best offers ,High Speed data ..24X7 customer support,featured plans</small> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card col-md-3 col-12 ml-2">
+            <div class="card-content">
+                <div class="card-body"> <img class="img rck" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSgm4tzF9MqMlcHmxVvDBvVCY6Z2QcE4p31Vg&usqp=CAU"/>
+                    <div class="card-title"><strong><button type="button" class="btn btn-secondary" (click)="gotoprepaid()">PREPAID</button></strong> </div>
+                    <div class="card-subtitle">
+                        <p> <small class="text-muted">Best offers ,High Speed data ..24X7 customer support,featured plans</small> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+</div>
+<br>
+</body>

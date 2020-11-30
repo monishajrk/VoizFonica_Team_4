@@ -1,0 +1,74 @@
+
+  <body>
+    <header id="header" class="d-flex align-items-center">
+        <div class="container d-flex align-items-center">
+      
+          <div class="logo mr-auto">
+            <h1 class="text-light" ><a href="index.html"><span>VOIZFONICA</span></a></h1>
+            </div>
+      
+          <nav class="nav-menu d-none d-lg-block">
+            <ul><br>
+               <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotouserdata()">||  User Data  || </button></li>
+              <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotooffers()"> Offers  || </button></li>
+             
+              <li class="active"> <button id="p" type="button" class="btn btn-link" (click)="gotochat()"> Live Chat || </button></li>
+              <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotomain()">  Logout  ||</button></li>
+                </ul>
+          </nav>
+      
+        </div>
+      </header>
+  
+<div class="wrapper">
+    <table id="acrylic" style="width: 80%;">
+        <thead>
+            <tr>
+                     <th>Id</th>
+              <th>Offer_Id</th>
+              <th>Offer_Name</th>
+            <th>Offer_Type</th>
+            
+            <th>Amount</th>
+            <th>Data</th>
+            <th>Validity</th>
+            <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody  >
+            <tr *ngFor="let user of users">
+            
+           <td>{{user.id}}</td>
+           <td>{{user.offerId}}</td>
+           <td>{{user.offerName}}</td>
+           <td>{{user.type}}</td>
+           <td>{{user.amount}}</td>
+           <td>{{user.data}}</td>
+           <td>{{user.validity}}</td>
+
+            <td>
+                <button type="button" class="btn btn-success" (click)="gotoupdateoffer(user.offerId)">Edit</button>
+                <button type="button" class="btn btn-success" (click)="delOffer(user.id)">Delete</button>
+            </td>
+            
+           
+           
+          </tr>    
+            
+        </tbody>
+    </table>
+    
+</div>&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+<button type="button" class="btn btn-danger" (click)="gotocoffers()">Create Offers</button>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br>
+</body>

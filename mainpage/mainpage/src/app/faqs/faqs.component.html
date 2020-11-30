@@ -1,0 +1,239 @@
+<header id="header" class="d-flex align-items-center">
+  <div class="container d-flex align-items-center">
+
+    <div class="logo mr-auto">
+      <h1 class="text-light" ><a href="index.html"><span>VOIZFONICA</span></a></h1>
+    </div>
+
+    <nav class="nav-menu d-none d-lg-block">
+      <ul><br>
+        <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotomanage(use.emailId)">||  Manage Accounts  || </button></li>
+        <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotohis()">  Transaction History ||</button></li>
+        <li class="active"> <button id="p" type="button" class="btn btn-link" (click)="gotoserv(use.emailId)">  New Service  || </button></li>
+        <li class="active"> <button id="p" type="button" class="btn btn-link" (click)="gotorecharge()">  Recharge || </button></li> 
+        <li class="active"><button id="p" type="button" class="btn btn-link">  Help ||</button></li>
+        <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotomain()">  Logout  ||</button></li>
+        <li class="active"><button id="p" type="button" class="btn btn-secondary" (click)="gotoview()">{{use.firstName}} </button></li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
+
+<div class="hello">
+<div class="container py-3" id="m3">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <div id="m1">
+    <button type="button" class="btn btn-info" (click)="gotochat()">Live Chat</button>  
+  </div>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  
+  <div>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<hr>
+    <h3>FAQS RELATED TO APPLICATION</h3>
+  </div> <hr>
+  <div class="row">
+      <div class="col-10 mx-auto">
+          <div class="accordion" id="faqExample">
+              <div class="card">
+                  <div class="card-header p-2" id="headingOne">
+                      <h5 class="mb-0">
+                          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Q: What is VoizFonica Program?
+                          </button>
+                        </h5>
+                  </div>
+
+                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqExample">
+                      <div class="card-body">
+                          <b>
+                            VoizFonica is an exclusive rewards program for valued VoizFonica customers which gives them access to a host of exclusive rewards, perks & privileges
+                          </b>
+
+                      </div>
+                  </div>
+              </div>
+              <div class="card">
+                  <div class="card-header p-2" id="headingTwo">
+                      <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Q: What are the benefits under this program?
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqExample">
+                      <div class="card-body">
+                        <b>
+                        VoizFonica offers a variety of exclusive rewards, perks & privileges. These benefits are customized depending on the plan of the customer
+                        membership at no extra cost
+                      </b>   
+                      </div>
+                  </div>
+              </div>
+              <div class="card">
+                  <div class="card-header p-2" id="headingThree">
+                      <h5 class="mb-0">
+                          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Q. How can I claim my benefits?
+                          </button>
+                        </h5>
+                  </div>
+                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqExample">
+                      <div class="card-body">
+                        <b>
+                        Claiming Exclusive rewards is very simple. Just download VoizFonica App or upgrade to the latest version and click on the VoizFonica banner.
+                      </b>
+                      </div>
+                  </div>
+              </div>
+              <div class="card">
+                  <div class="card-header p-2" id="headingThree">
+                      <h5 class="mb-0">
+                          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Q. What is the Exclusive offer with VoizFonica?
+                          </button>
+                        </h5>
+                  </div>
+                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqExample">
+                      <div class="card-body">
+                        <b>
+                        Postpaid – You get access to Exclusive for 1 year on plans of Rs 499 or above
+                        Prepaid – You get access to Exclusive on recharging with a Rs 349 pack for the 28 day validity of the pack
+                        Broadband – You get access to Exclusive for 1 year on plans of Rs 1099 or above
+                      </b>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header p-2" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Q. I am not getting any VoizFonica details on my App, What should I do?
+                        </button>
+                      </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqExample">
+                    <div class="card-body">
+                      <b>
+                      Don't worry. If you do not see any VoizFonica details on your app, simply update the app from play store or app store and the information would then become available for you.
+                    </b>
+                    </div>
+                </div>
+            </div>
+
+          </div>
+
+      </div>
+  </div>
+  <!--/row-->
+<hr>
+<div>
+  <h3>FAQS RELATED TO PLANS</h3><hr>
+</div>
+<div class="row">
+  <div class="col-10 mx-auto">
+      <div class="accordion" id="faqExample">
+          <div class="card">
+              <div class="card-header p-2" id="headingOne">
+                  <h5 class="mb-0">
+                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Q:  What is VoizFonica Disney+ Hotstar VIP recharge offer?
+                      </button>
+                    </h5>
+              </div>
+
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqExample">
+                  <div class="card-body">
+                      <b>
+                       VoizFonica is offering Disney+ Hotstar VIP subscription at no extra cost for its Prepaid customer recharging with Rs. 401/ Rs. 448/ Rs. 499/ Rs. 599 or Rs. 2698. On recharging
+                       </b>
+
+                  </div>
+              </div>
+          </div>
+          <div class="card">
+              <div class="card-header p-2" id="headingTwo">
+                  <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Q: Are these packs available to all VoizFonica prepaid customers?
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqExample">
+                  <div class="card-body">
+                    <b>
+                      401, 448, 599 and Rs. 2698 Packs are open & available to all VoizFonica prepaid customers. However, Rs. 499 pack is a 
+                      “First Time Recharge” pack, i.e. available to only new VoizFonica Prepaid customers
+                  </b>   
+                  </div>
+              </div>
+          </div>
+          <div class="card">
+              <div class="card-header p-2" id="headingThree">
+                  <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Q. Can these packs be availed through through any mode or channel like Paytm, PhonePe, Google Pay etc.?
+                      </button>
+                    </h5>
+              </div>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqExample">
+                  <div class="card-body">
+                    <b>
+                      Yes, these Packs are available across all modes
+                   </b>
+                  </div>
+              </div>
+          </div>
+          <div class="card">
+              <div class="card-header p-2" id="headingThree">
+                  <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Q. What happens after the pack validity is over?
+                      </button>
+                    </h5>
+              </div>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqExample">
+                  <div class="card-body">
+                    <b>
+                      The Telecom benefits and Disney+ Hotstar VIP subscription are independent of
+                       each other. Once the validity of your Telecom benefits finishes,
+                       you are free to recharge with any other pack of your choice 
+                   </b>
+                  </div>
+              </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header p-2" id="headingThree">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Q. What if I port out of VoizFonica or downgrade to 
+                      another pack. , Will my subscription continue? 
+                    </button>
+                  </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqExample">
+                <div class="card-body">
+                  <b>
+                    No need to worry! Disney+ Hotstar 
+                    VIP subscription will continue even if a you port out of VoizFonica
+                 </b>
+                </div>
+            </div>
+        </div>
+
+      </div>
+
+  </div>
+</div>
+<!--/row-->
+
+
+
+</div>
+<br><br><br><br><br>
+<br><br><br><br><br>
+
+<!--container-->
+</div>

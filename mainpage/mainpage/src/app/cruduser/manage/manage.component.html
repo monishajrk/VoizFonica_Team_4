@@ -1,0 +1,78 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<body>
+<header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+  
+      <div class="logo mr-auto">
+        <h1 class="text-light" ><a href="index.html"><span>VOIZFONICA</span></a></h1>
+      </div>
+  
+      <nav class="nav-menu d-none d-lg-block">
+        <ul><br>
+          <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotomanage(use.emailId)">||  Manage Accounts  || </button></li>
+          <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotohis()">  Transaction History ||</button></li>
+          <li class="active"> <button id="p" type="button" class="btn btn-link" (click)="gotoserv(use.emailId)">  New Service  || </button></li>
+          <li class="active"> <button id="p" type="button" class="btn btn-link" (click)="gotorecharge()">  Recharge || </button></li> 
+          <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotofaqs()">  Help  ||</button></li>
+          
+          <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotomain()">  Logout  ||</button></li>
+          <li class="active"><button id="p" type="button" class="btn btn-secondary" (click)="gotoview()">{{use.firstName}} </button></li>
+        </ul>
+      </nav>
+  
+    </div>
+  </header>
+ 
+    
+  
+ <div class="wrapper">
+   
+   
+        <table id="acrylic" style="width: 80%;">
+            <thead>
+                <tr>
+                  <th>Email</th>
+                  <th>Mobile Number</th>
+                  <th>Type</th>
+                <th>Plan_Id</th>
+                
+                <th>Amount</th>
+                <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let serv of servs" >
+                <tr *ngIf="serv.emailId==use.emailId">
+                
+                <td>{{serv.emailId}}</td>
+                <td>{{serv.phoneNo}}</td>
+                <td>{{serv.type}}</td>
+                <td>{{serv.planId}}</td>
+                <td>{{serv.amount}}</td>
+                <td>
+                  <button type="button" class="btn btn-success" (click)="gotoviewplan(serv.planId)">View Plan</button>
+                </td>
+                
+               
+               
+              </tr>    
+                
+            </tbody>
+        </table>
+        
+    </div>&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <button type="button" class="btn btn-danger" (click)="gotoaddon()">Buy Add-Ons</button>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br>
+      </body>

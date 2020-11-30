@@ -1,0 +1,310 @@
+
+   .p-top-100{
+    padding:100px 0;
+}
+.m-top-40{
+    margin-top: 40px;
+}
+
+
+
+
+/*=================================================
+Pricint fiv
+===================================================*/
+.bs-five-area{
+    width:100%;
+    display: inline-block;
+    box-shadow: 0px 0px 6px 0px #ddd;
+    overflow: hidden;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+.bs-five-area.bs-radius{
+    border-radius: 30px;
+}
+.bs-five-area > div{
+    padding:0;
+}
+
+
+.bs-five-area .bs-five{
+    position: relative;
+    width: 100%;  
+    margin: auto; 
+    transition: all 0.4s;
+    padding:20px 0px;
+}
+.bs-five-area .bs-five h6{
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.bs-five-area .bs-five h1{
+    font-size:64px;
+    font-weight: 100;
+    line-height: 72px;
+}
+.bs-five-area .bs-five h1 sup{
+    font-size:30px;
+    top:-30px;
+}
+.bs-five-area .bs-five ul {
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+.bs-five-area .bs-five ul li{
+    line-height: 45px;
+    border-bottom:0px;
+}
+
+
+.bs-five-area .bs-five:hover{
+
+    background: #179880; 
+    transition: all 0.4s;
+
+}
+
+.bs-five-area .bs-five.active {
+    background: #179880; 
+    background: -webkit-linear-gradient(left, #179880 , #21A476); 
+    background: -o-linear-gradient(right, #179880, #21A476); 
+    background: -moz-linear-gradient(right, #179880, #21A476); 
+    background: linear-gradient(to right, #179880 , #21A476);  
+}
+
+.bs-five-area .bs-five .btn-success{
+    padding: 10px 50px;
+    display: inline-block;
+    border-radius: 30px;
+    background-color: #179880;
+    border-color: #21A476;
+}
+
+
+.bs-five-area .bs-five.active .btn.btn-success, 
+.bs-five-area .bs-five:hover.bs-five .btn.btn-success{
+    background: #E0FFF6 ; 
+    color:#444 ;
+
+}
+
+.bs-five-area .bs-five.active,
+.bs-five-area .bs-five.active ul li,
+.bs-five-area .bs-five:hover.bs-five, 
+.bs-five-area .bs-five:hover.bs-five ul li
+{
+    color:#fff;
+}
+
+
+
+h1{
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bolder;
+    color: #179880;
+}
+body {
+    background-color: #f9f9fa
+}
+
+h6 {
+    font-size: 14px
+}
+
+
+#h{
+    background-color: rgb(211, 109, 109);
+}
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #444444;
+    background-color: #f4f4f4;
+  }
+  
+  a {
+    color: #4eb478;
+  }
+  
+  a:hover {
+    color: #72c393;
+    text-decoration: none;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway", sans-serif;
+  }
+  
+  .wrap {
+    max-width: 1440px;
+    margin: auto;
+    background: #fff;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  #x{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-size: cover;
+    
+  }
+  #p{
+      font-size: 1.4em;
+  }
+
+  
+  /*--------------------------------------------------------------
+  # Header
+  --------------------------------------------------------------*/
+  #header {
+    height: 70px;
+    transition: all 0.5s;
+    z-index: 997;
+    transition: all 0.5s;
+    background: #000;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  #header .logo h1 {
+    font-size: 28px;
+    margin: 0;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  #header .logo h1 a, #header .logo h1 a:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  #header .logo img {
+    padding: 0;
+    margin: 0;
+    max-height: 40px;
+  }
+  
+  /*--------------------------------------------------------------
+  # Navigation Menu
+  --------------------------------------------------------------*/
+  /* Desktop Navigation */
+  .nav-menu, .nav-menu * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .nav-menu > ul > li {
+    position: relative;
+    white-space: nowrap;
+    float: left;
+  }
+  
+  .nav-menu a {
+    display: block;
+    position: relative;
+    color: #fff;
+    padding: 12px 0 12px 30px;
+    transition: 0.3s;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+    color: #72c393;
+    text-decoration: none;
+  }
+  
+  .nav-menu .drop-down ul {
+    display: block;
+    position: absolute;
+    left: 30px;
+    top: calc(100% + 30px);
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    padding: 10px 0;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    transition: ease all 0.3s;
+  }
+  
+  .nav-menu .drop-down:hover > ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+  }
+  
+  .nav-menu .drop-down li {
+    min-width: 180px;
+    position: relative;
+  }
+  
+  .nav-menu .drop-down ul a {
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: none;
+    color: #444444;
+  }
+  
+  .nav-menu .drop-down ul a:hover, .nav-menu .drop-down ul .active > a, .nav-menu .drop-down ul li:hover > a {
+    color: #4eb478;
+  }
+  
+  .nav-menu .drop-down > a:after {
+    content: "\ea99";
+    font-family: IcoFont;
+    padding-left: 5px;
+  }
+  
+  .nav-menu .drop-down .drop-down ul {
+    top: 0;
+    left: calc(100% - 30px);
+  }
+  
+  .nav-menu .drop-down .drop-down:hover > ul {
+    opacity: 1;
+    top: 0;
+    left: 100%;
+  }
+  
+  .nav-menu .drop-down .drop-down > a {
+    padding-right: 35px;
+  }
+  
+  .nav-menu .drop-down .drop-down > a:after {
+    content: "\eaa0";
+    font-family: IcoFont;
+    position: absolute;
+    right: 15px;
+  }
+  
+  @media (max-width: 1366px) {
+    .nav-menu .drop-down .drop-down ul {
+      left: -90%;
+    }
+    .nav-menu .drop-down .drop-down:hover > ul {
+      left: -100%;
+    }
+    .nav-menu .drop-down .drop-down > a:after {
+      content: "\ea9d";
+    }
+  }
+  
+  
+  body{
+    background-color:rgb(150, 148, 148);
+  }
+  

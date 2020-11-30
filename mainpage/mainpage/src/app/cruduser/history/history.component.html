@@ -1,0 +1,73 @@
+<body>
+    
+
+<header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+  
+      <div class="logo mr-auto">
+        <h1 class="text-light" ><a href="index.html"><span>VOIZFONICA</span></a></h1>
+        </div>
+  
+      <nav class="nav-menu d-none d-lg-block">
+        <ul><br>
+          <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotomanage(use.emailId)">||  Manage Accounts  || </button></li>
+          <li class="active"> <button id="p" type="button" class="btn btn-link" (click)="gotoserv(use.emailId)">  New Service  || </button></li>
+          <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotofaqs()">  Transaction History ||</button></li>
+          <li class="active"> <button id="p" type="button" class="btn btn-link" (click)="gotorecharge()">  Recharge || </button></li> 
+          <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotofaqs()">  Help ||</button></li>
+         
+          <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotomain()">  Logout  ||</button></li>
+          <li class="active"><button id="p" type="button" class="btn btn-secondary" (click)="gotoview()">  {{use.firstName}} </button></li>
+        </ul>
+      </nav>
+  
+    </div>
+  </header>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<br>
+<h1 style="text-align: center;font-weight: bold;"><br> Transaction History </h1>
+<div class="container even_tab" >
+    <br>
+    <table class="table" >
+      <thead class="thead-dark" style="font-weight: bold;font-size: larger;">
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Mobile No.</th>
+          <th scope="col">Type</th>
+          <th scope="col">Amount</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody style="font-size: large;" *ngFor="let serv of servs" >
+        <tr *ngIf="serv.emailId==use.emailId">
+          <th scope="row">{{serv.date}}</th>
+          <td>{{serv.phoneNo}}</td>
+          <td>{{serv.type}}({{serv.planId}})</td>
+          <td>{{serv.amount}}</td>
+          <td *ngIf="serv.cat=='Plan'">
+            <button type="button" class="btn btn-primary" (click)="gotobill(serv.id,serv.planId)">View Bill</button>
+          </td>
+          <td *ngIf="serv.cat=='Offer'">
+            <button type="button" class="btn btn-primary" (click)="gotobill1(serv.id,serv.planId)">View Bill</button>
+          </td>
+        </tr>
+        
+      </tbody>
+    </table>
+	
+	
+		
+	
+	
+	
+
+</div>
+<br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br>
+
+</body>

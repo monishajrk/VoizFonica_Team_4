@@ -1,0 +1,130 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+    
+
+<header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+  
+      <div class="logo mr-auto">
+        <h1 class="text-light" ><a href="index.html"><span>VOIZFONICA</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+  
+      <nav class="nav-menu d-none d-lg-block">
+        <ul><br>
+          <!-- <li class="active"><a href="">View Bill</a></li> -->
+          <!-- <li class="active"><a href="">Manage Accounts</a></li> -->
+          <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotomanage(use.emailId)">||  Manage Accounts  || </button></li>
+          <!-- <li class="active"><a href="">New Connection</a></li> -->
+          <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotohis()">  Transaction History ||</button></li>
+          <li class="active"> <button id="p" type="button" class="btn btn-link" (click)="gotoserv(use.emailId)">  New Service  || </button></li>
+          <!-- <li class="active"> </li> -->
+          <li class="active"> <button id="p" type="button" class="btn btn-link" (click)="gotorecharge()">  Recharge || </button></li> 
+          <!-- <li class="active"><a href="http://localhost:4401/login">Help and Support</a></li> -->
+          <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotofaqs()">  Help  ||</button></li>
+          <!-- <li class="active"><a href="#portfolio">Services</a></li> -->
+         
+          <!-- <li class="active"><a href="http://localhost:4401/main">Logout</a></li> -->
+          <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotomain()">  Logout  ||</button></li>
+          <!-- <li class="active"><button type="submit" class="btn btn-secondary" (click)="gotomodify()">View Profile</button></li>&nbsp;&nbsp; -->
+          <!-- <li style="text-align: right;" class="active"><a  href="#" >Welcome {{use.firstName}}</a></li> -->
+          <li class="active"><button id="p" type="button" class="btn btn-secondary" (click)="gotoview()">{{use.firstName}} </button></li>
+          <!-- <li class="active"><button type="submit" class="btn btn-secondary" (click)="gotomodify()">Welcome {{use.firstName}}</button></li> -->
+        </ul>
+      </nav>
+  
+    </div>
+  </header>
+  <section id="bs-pricing-five" class="bs-pricing-five p-top-100 bg-white" >
+    
+    <div><h1>Prepaid Plans Select Your Pack</h1></div>
+   
+            <div class="container">
+                
+                <div class="row">
+                    <div class="bs-five-area bs-radius">
+                        <div class="col-md-3 no-padding">
+                            <div class="bs-five">
+                                <h6 class="text-uppercase">Popular Plans</h6>
+                                <h1 class="bs-caption"><sup>Rs.</sup>199</h1>
+                                <p>No Credit Cart Needed</p>
+
+                                <ul>
+                                    <li><b>1.5GB Per Day</b></li>
+                                    <li>Unlimited Calls</li>
+                                    <li>Validity:28 Days</li>
+                                    <li>Limited upto 42GB</li>
+                                    <li>24/7 Customer Support</li>
+                                </ul>
+                                <button class="btn btn-success btn-round m-top-40" id=" P199" (click)="gotoplan('PRE199')">Buy Now</button>
+                                <!-- <a href="http://localhost:4401/dongle/payment" class="btn btn-success btn-round m-top-40" id="DU499" (click)="gotoplan('DU499')" ></a>   -->
+                            </div>
+                        </div>
+                        <div class="col-md-3 no-padding">
+                            <div class="bs-five">
+                                
+                                <h6 class="text-uppercase">Work From Home Pack</h6>
+                                <h1 class="bs-caption"><sup>Rs.</sup>251</h1>
+                                <p>No Credit Cart Needed</p>
+                                <ul>
+                                    <li><b>50GB</b></li>
+                                    <li>Validity:30 Days</li>
+                                    <li>24/7 Customer Support</li>
+                                    <li> </li>
+                                    <li></li>
+                                   <li></li>
+                                    <li></li>
+                                </ul>
+                                <button class="btn btn-success btn-round m-top-40" id="PRE251" (click)="gotoplan('PRE251')">Buy Now</button>
+                                <!-- <a href="https://bootstrapthemes.co" class="btn btn-success btn-round m-top-40" id="DP799" (click)="gotoplan('DP799')">Buy Now</a>   -->
+                            </div>
+                        </div>
+                        <div class="col-md-3 no-padding">
+                            <div class="bs-five">
+                                <h6 class="text-uppercase">Cricket Pack</h6>
+                                <h1 class="bs-caption"><sup>Rs.</sup>749</h1>
+                                <p>No Credit Cart Needed</p>
+
+                                <ul>
+                                    <li><b>Unlimited Internet</b></li>
+                                    <li>84GB</li>
+                                    <li>Validity:56 Days</li>
+                                    <li>Disney+ Hotstar Premium</li>
+                                    <li>24/7 Customer Support</li>
+                                </ul>
+                                <button class="btn btn-success btn-round m-top-40" id="PRE749" (click)="gotoplan('PRE749')">Buy Now</button>
+                                <!-- <a href="https://bootstrapthemes.co" class="btn btn-success btn-round m-top-40" id="DE999" (click)="gotoplan('DE999')" >Buy Now</a>  -->
+                            </div>
+                        </div>
+                        <div class="col-md-3 no-padding">
+                            <div class="bs-five">
+                                <h6 class="text-uppercase">Long term Pack</h6>
+                                <h1 class="bs-caption"><sup>Rs.</sup>4999</h1>
+                                <p>No Credit Cart Needed</p>
+
+                                <ul>
+                                    <li><b>Unlimited 350GB Internet</b></li>
+                                    <li>Unlimited Calls and SMS</li>
+                                    <li>Validity:360 Days</li>
+                                    <!-- <li>Free Netflix Subscription</li> -->
+                                    <li>24/7 Customer Support</li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <button class="btn btn-success btn-round m-top-40" id="P4999" (click)="gotoplan('PRE4999')">Buy Now</button>
+                                <!-- <a href="https://bootstrapthemes.co" class="btn btn-success btn-round m-top-40" id="DV1499" (click)="gotoplan('DV1499')">Buy Now</a>   -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+           <!-- <div style="text-align: center;margin-top: 150px; margin-bottom:100px"> | <a href="http://bootstrapthemes.co/"target="_blank"> Snippet By Bootstrapthemes.co </a> |</div> -->
+          

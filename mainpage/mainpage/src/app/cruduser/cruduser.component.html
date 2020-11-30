@@ -1,0 +1,661 @@
+<style type="text/css">.text-heading-1 {
+  height: 50px;
+  position: relative;
+  z-index: 1;
+  }
+  .banner h1 {
+  letter-spacing: -1.2px;
+  }
+  .fs-34 {
+  font-size: 34px !important;
+  }
+  .fs-42 {
+  font-size: 42px!important;
+  }
+  .slider {
+  min-height: 600px;
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  }
+  .slider__nav {
+  width: 12px;
+  height: 12px;
+  margin: 2rem 12px;
+  border-radius: 50%;
+  z-index: 10;
+  outline: 4px solid #fff !important;
+  outline-offset: -9px;
+  box-shadow: 0 0 0 2px #fff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  }
+  .slider__nav:checked {
+  -webkit-animation: check 0.4s linear forwards;
+  animation: check 0.4s linear forwards;
+  }
+  .slider__nav:checked:nth-of-type(1) ~ .slider__inner {
+  left: 0%;
+  }
+  .slider__nav:checked:nth-of-type(2) ~ .slider__inner {
+  left: -100%;
+  }
+  .slider__inner {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  width: 200%;
+  -webkit-transition: left 0.4s;
+  transition: left 0.4s;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  }
+  .slider__contents > * {
+  width: 100%;
+  }
+  .slider__contents {
+  height: 650px!important;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  }
+  @-webkit-keyframes check {
+  50% {
+  outline-color: #333;
+  box-shadow: 0 0 0 12px #333, 0 0 0 36px rgba(51, 51, 51, 0.2);
+  }
+  100% {
+  outline-color: #333;
+  box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+  }
+  }
+  @keyframes check {
+  50% {
+  outline-color: #333;
+  box-shadow: 0 0 0 12px #333, 0 0 0 36px rgba(51, 51, 51, 0.2);
+  }
+  100% {
+  outline-color: #333;
+  box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+  }
+  }
+  ul.slide-controller {
+  padding-left: 0;
+  margin-top: 20px;
+  bottom: 0;
+  position: absolute;
+  z-index: 1;
+  }
+  ul.slide-controller li {
+  float: left;
+  margin-right: 10px;
+  height: 10px;
+  width: 10px;
+  cursor: pointer;
+  background: none;
+  list-style: none;
+  border: 1px solid #707070;
+  border-radius: 50%;
+  }
+  ::placeholder {
+  color: #fff;
+  }
+  :-ms-input-placeholder {
+  color: #fff;
+  }
+  ::-ms-input-placeholder {
+  color: #fff;
+  }
+  .fs-20 {
+  line-height: 30px;
+  }
+  .flex-icon > i {
+  font-size: 130px;
+  line-height: 1;
+  }
+  .line-height {
+  line-height: 55px!important;
+  }
+  @media screen and (max-width: 767px) {
+  .text-heading {
+  width: 225px;
+  }
+  .slider {
+  height: 685px;
+  }
+  .slider__contents {
+  height: 740px!important;
+  }
+  .text-heading-1 {
+  width: 330px!important;
+  }
+  }
+  @media screen and (max-width: 767px) {
+  .banner h1 {
+  line-height: 45px;
+  }
+  .banner h1 {
+  letter-spacing: -1.5px;
+  }
+  }
+</style>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<body>
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+  
+      <div class="logo mr-auto">
+        <h1 class="text-light" ><a href="index.html"><span>VOIZFONICA</span></a></h1>
+       
+      </div>
+  
+      <nav class="nav-menu d-none d-lg-block">
+        <ul><br>
+          
+          <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotomanage(use.emailId)">||  Manage Accounts  || </button></li>
+          <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotohis()">  Transaction History ||</button></li>
+          <li class="active"> <button id="p" type="button" class="btn btn-link" (click)="gotoserv(use.emailId)">  New Service  || </button></li>
+
+          <li class="active"> <button id="p" type="button" class="btn btn-link" (click)="gotorecharge()">  Recharge || </button></li> 
+          <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotofaqs()">  Help ||</button></li>
+          <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotomain()">  Logout  ||</button></li>
+          <li class="active"><button id="p" type="button" class="btn btn-secondary" (click)="gotoview()">  {{use.firstName}} </button></li>
+        </ul>
+      </nav>
+  
+    </div>
+  
+  </header>
+  <br>
+  <legend>
+  <h3 style="color: black;"><strong> Welcome {{use.firstName}} </strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </h3>
+<br>
+</legend>
+
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css' />
+
+<div class="container-fluid"><br>
+  <span style="font-size: x-large;color: black;text-align: left;"><h3><strong>&nbsp;&nbsp;&nbsp; Your Current Plans :</strong></h3><br></span>
+        <div class="row" >
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" *ngFor="let serv of servs">
+               
+              <div class="tile" *ngIf="serv.emailId==use.emailId" >
+                    <div class="wrapper">
+                        <div class="header">Mob No. : {{serv.phoneNo}} </div>
+
+                       
+
+                        <div class="dates">
+                            <div class="start">
+                                <strong>Subscribed On</strong> {{serv.date}}
+                                
+                            </div>
+                            <div class="ends">
+                                <strong>Expires On</strong> {{serv.endDate}}
+                            </div>
+                        </div>
+                        <div class="stats">
+
+                          <div>
+                              <strong>Price</strong> {{serv.amount}}
+                          </div>
+
+                          <div>
+                              <strong>
+                                 Plan Id</strong>
+                                 {{serv.planId}}
+                          </div>
+
+                          <div>
+                              <strong>Type</strong> {{serv.type}} 
+                          </div>
+
+                      </div>
+
+                        
+
+                       
+
+                        
+                    </div>
+                </div> 
+            </div>
+
+                       
+                    </div>
+                 
+            </div>
+        
+    <hr>
+<br>
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<div class="container" style="width: 100%;">
+
+
+<div class="row" style="width: 100%;">
+        
+       <div class="col-md-7 " style="width: 100%;">
+
+<div class="panel panel-default" style="width: 100%;">
+  <div class="panel-heading" style="width: 100%;">  <h4 >Your Profile</h4></div>
+   <div class="panel-body" style="width: 100%;">
+       
+    <div class="box box-info" style="width: 100%;">
+        
+            <div class="box-body">
+                     <div class="col-sm-6">
+                     <div  align="center"> <img alt="User Pic" src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" id="profile-image1" class="img-circle img-responsive"> 
+                
+                <input id="profile-image-upload" class="hidden" type="file">
+           
+              
+  
+                
+                
+                     
+                     
+                     </div>
+              
+              <br>
+    
+              <!-- /input-group -->
+            </div>
+            <div class="col-sm-6">
+            <h4 style="color:#00b1b1;">{{use.firstName}} </h4>
+            <span><p>VoizFonica Customer</p></span>
+            <span><p><b> Your Current Plans :</b></p></span>
+              <span *ngFor="let serv of servs">
+              <p *ngIf="serv.emailId==use.emailId">{{serv.type}} : {{serv.planId}} <br></p>
+              </span>            
+            </div>
+            <div class="clearfix"></div>
+            <hr style="margin:5px 0 5px 0;">
+    
+              
+<div class="col-sm-5 col-xs-6 tital " >First Name:</div><div class="col-sm-7 col-xs-6 ">{{use.firstName}}</div>
+     <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+<div class="col-sm-5 col-xs-6 tital " >Last Name:</div><div class="col-sm-7"> {{use.lastName}}</div>
+  <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+<div class="col-sm-5 col-xs-6 tital " >Customer_Id:</div><div class="col-sm-7"> {{use.id}}</div>
+  <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+<div class="col-sm-5 col-xs-6 tital " >Email Id:</div><div class="col-sm-7">{{use.emailId}}</div>
+
+  <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+<div class="col-sm-5 col-xs-6 tital " >Mobile Number:</div><div class="col-sm-7">{{use.phoneNo}}</div>
+
+  <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+<div class="col-sm-5 col-xs-6 tital " >Gender:</div><div class="col-sm-7">{{use.gender}}</div>
+
+ <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+<div class="col-sm-5 col-xs-6 tital " >City:</div><div class="col-sm-7">{{use.city}}</div>
+
+ <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+<div class="col-sm-5 col-xs-6 tital " >Pincode:</div><div class="col-sm-7">{{use.pincode}}</div>
+
+
+            
+          </div>
+          
+
+        </div>
+       
+            
+    </div> 
+    </div>
+</div>  
+    <script>
+              $(function() {
+    $('#profile-image1').on('click', function() {
+        $('#profile-image-upload').click();
+    });
+});       
+              </script> 
+ 
+   </div>
+</div>
+
+
+
+
+         
+
+  
+
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+<!DOCTYPE html><html class=''>
+<head><script src='//production-assets.codepen.io/assets/editor/live/console_runner-079c09a0e3b9ff743e39ee2d5637b9216b3545af0de366d4b9aad9dc87e26bfd.js'></script><script src='//production-assets.codepen.io/assets/editor/live/events_runner-73716630c22bbc8cff4bd0f07b135f00a0bdc5d14629260c3ec49e5606f98fdd.js'></script><script src='//production-assets.codepen.io/assets/editor/live/css_live_reload_init-2c0dc5167d60a5af3ee189d570b1835129687ea2a61bee3513dee3a50c115a77.js'></script><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="//production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" /><link rel="mask-icon" type="" href="//production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" /><link rel="canonical" href="https://codepen.io/nikhil8krishnan/pen/WvYPvv?depth=everything&limit=all&order=popularity&page=27&q=text&show_forks=false" />
+
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'>
+<style class="cp-pen-styles">
+h1{
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 15px;
+}
+table{
+  width:100%;
+  table-layout: fixed;
+}
+.tbl-header{
+  background-color: rgba(255,255,255,0.3);
+ }
+.tbl-content{
+  height:300px;
+  overflow-x:auto;
+  margin-top: 0px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+th{
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+}
+td{
+  padding: 15px;
+  text-align: left;
+  vertical-align:middle;
+  font-weight: 300;
+  font-size: 12px;
+  color: #fff;
+  border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+section{
+  margin: 50px;
+}
+
+
+/* follow me template */
+.made-with-love {
+  margin-top: 40px;
+  padding: 10px;
+  clear: left;
+  text-align: center;
+  font-size: 10px;
+  font-family: arial;
+  color: #fff;
+}
+.made-with-love i {
+  font-style: normal;
+  color: #F50057;
+  font-size: 14px;
+  position: relative;
+  top: 2px;
+}
+.made-with-love a {
+  color: #fff;
+  text-decoration: none;
+}
+.made-with-love a:hover {
+  text-decoration: underline;
+}
+
+
+/* for custom scrollbar for webkit browser*/
+
+::-webkit-scrollbar {
+    width: 6px;
+} 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+} 
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
+</style></head><body>
+<section>
+  <!--for demo wrap-->
+  <h1 style="color: black;">Available Plans</h1>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Plan_Id</th>
+          <th>Plan_Name</th>
+          <th>Type</th>
+          <th>Amount</th>
+          <th>Data</th>
+          <th>Validity</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        <tr *ngFor="let plan of plans">
+          <td>{{plan.id}}</td>
+          <td>{{plan.planId}} </td>
+          <td>{{plan.planName}}</td>
+          <td>{{plan.type}}</td>
+          <td>{{plan.amount}}</td>
+          <td>{{plan.data}}</td>
+          <td>{{plan.validity}}</td>
+        </tr>
+       
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <!--for demo wrap-->
+  <h1 style="color: black;">Available Offers</h1>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Offer_Id</th>
+          <th>Offer_Name</th>
+          <th>Type</th>
+          <th>Amount</th>
+          <th>Data</th>
+          <th>Validity</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        <tr *ngFor="let off of offs">
+          <td>{{off.id}}</td>
+          <td>{{off.offerId}} </td>
+          <td>{{off.offerName}}</td>
+          <td>{{off.type}}</td>
+          <td>{{off.amount}}</td>
+          <td>{{off.data}}</td>
+          <td>{{off.validity}}</td>
+        </tr>
+       
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+
+
+
+<legend>
+  <section class="bg-red">
+    <article>
+    <div class="row hidden-xs">
+    <div class="col-sm-12">
+    <h2 class="color-white h4 mb-50 text-center" style="font-weight: bolder;font-size: xx-large;">Become an <strong><b><span>#VoIzFoNiCa</span></b></strong> member to get</h2><br>
+    </div>
+    </div>
+    
+    <div class="row visible-xs">
+    <div class="col-sm-12">
+    <h2 class="color-white mb-50 h4 text-center">Become an #VoizFonica member to get</h2>
+    </div>
+    </div>
+    
+    <div class="row">
+    <div class="col-sm-4 text-center mb-xs-30">
+    <div class="circle_icons mb-15"><img alt="" src="https://s3-ap-southeast-1.amazonaws.com/bsy/iportal/images/become-member-1_7D19999D93FCE45DFFD68B41D9034824.png" /></div>
+    
+    <h3 class="mb-10">Exclusive rewards</h3>
+    </div>
+    
+    <div class="col-sm-4 text-center mb-xs-30">
+    <div class="circle_icons mb-15"><img alt="" src="https://s3-ap-southeast-1.amazonaws.com/bsy/iportal/images/become-member-2_260C5382F43B11E36846F1FAC4355811.png" /></div>
+    
+    <h3 class="mb-10">Personalised offers</h3>
+    </div>
+    
+    <div class="col-sm-4 text-center mb-xs-30">
+    <div class="circle_icons mb-15"><img alt="" src="https://s3-ap-southeast-1.amazonaws.com/bsy/iportal/images/become-member-3_3D3B6A4E5D69D536FDF3E13B0F0950D3.png" /></div>
+    
+    <h3 class="mb-10">Never-seen-before privileges</h3>
+    </div>
+    </div>
+    
+    <div class="row">
+    <div class="col-sm-12 text-center">
+    <h2 class="mb-0 mt-30 h4">
+    </h2>
+    </div>
+    </div>
+    </article>
+    </section>
+</legend>
+
+
+
+<script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script><script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script >// '.tbl-content' consumed little space for vertical scrollbar, scrollbar width depend on browser/os/platfrom. Here calculate the scollbar width .
+$(window).on("load resize ", function() {
+  var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+  $('.tbl-header').css({'padding-right':scrollWidth});
+}).resize();
+//# sourceURL=pen.js
+</script>
+</body></html>
+
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+<div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel" data-slide-to="1"></li>
+        <li data-target="#carousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner carousel-zoom">
+        <div class="active item"><img class="img-responsive" id="l" src="assets\images\offer.jpg">
+        </div>
+        <div class="item"><img class="img-responsive" id="l" src="assets\images\offer1.jpg">
+        </div>
+        <div class="item"><img class="img-responsive" id="l" src="assets\images\offer1.jpg">
+        </div>
+       </div>
+    <a class="carousel-control left" href="#carousel" data-slide="prev">‹</a>
+    <a class="carousel-control right" href="#carousel" data-slide="next">›</a>
+</div>
+</div>
+
+
+
+
+
+
+  
+  <br><br><br>
+</body>

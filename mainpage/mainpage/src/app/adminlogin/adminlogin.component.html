@@ -1,0 +1,31 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="sidenav">
+         <div class="login-main-text">
+            <h2>Admin<br> Login Page</h2>
+            <h3>Login from here to access.</h3>
+            <img src="assets/img/images.png">
+         </div>
+      </div>
+      <div class="main">
+         <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+               <form [formGroup]="stud" id="loginform" class="form-horizontal" role="form" (ngSubmit)="loginAdmin(stud.value,admin.emailId)">
+                  <div class="form-group">
+                     <label id="z">Id</label>
+                     <input id="q" type="text" class="form-control" placeholder="Id" formControlName="email" [(ngModel)]="admin.emailId" >
+                  </div>
+                  <div class="form-group">
+                     <label id="z">Password</label>
+                     <input id="q" type="password" class="form-control" placeholder="Password" formControlName="password"  [(ngModel)]="admin.password">
+                  </div>
+                  <button id="v" type="submit" class="btn btn-black" [disabled]="stud.invalid">Login</button>
+                  <div style="float:right; font-size: 100%; position: relative; top:-10px"><a href="http://localhost:4401/forgotadmin" style="font-size: large;">Forgot password?</a></div>
+                  <div id="l"><b>{{msg}}</b></div>
+               </form>
+            </div>
+         </div>
+      </div>

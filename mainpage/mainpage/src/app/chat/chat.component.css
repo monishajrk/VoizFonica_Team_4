@@ -1,0 +1,265 @@
+section{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.infoBar{
+    border-bottom: 1px solid;
+}
+.topnav{
+    width: 100%;
+    height: auto;
+    position: fixed;
+    z-index: 3;
+    background-color: white;
+
+}
+.DP{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+}
+.displayContent{
+    height: 300px;
+    width: 50vw;
+    margin-top:10px;
+    margin-left: -30px;
+    border: 2px solid orange;
+    border-radius: 10px;
+    padding: 10px;
+   
+}
+.playerList{
+    height: 300px;
+    
+    width: 15vw;
+    margin-top: 10px;
+    position: relative;
+    left: -40px;
+    border: 2px solid pink;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+.chatbox{
+    height: 650px;
+    width: 99vw;
+     
+    background-color:teal;
+    background-image: linear-gradient(to right,rgb(28, 118, 160),white);
+    border: 5px solid black;
+
+    /* background-color: red; */
+    /* border-top-left-radius : 10px; 
+    border-bottom-left-radius : 10px;  */
+    border-radius: 10px;
+}
+.rankingList{
+    height: 200px;
+    width: 57vw;
+    margin-top: 10px;
+    margin-left: -30px;
+    border: 2px solid blue;
+    border-top-left-radius : 10px; 
+    border-top-right-radius : 10px; 
+    border-bottom:none;
+    padding: 5px;
+    overflow-y: scroll;
+}
+.clueList{
+    height: 200px;
+    width: 35vw;
+    margin: 10px;
+    border: 2px solid orange;
+    border-top-left-radius : 10px; 
+    border-top-right-radius : 10px;
+    border-bottom:none;
+    padding: 10px;
+    overflow-y: scroll;
+}
+.midLayout{
+    /* overflow: hidden; */
+    position: relative;
+    margin-top: 90px;
+} 
+.midLayout li{
+    list-style-type: none;
+    float: left;
+}
+.bottomLayout li{
+    list-style-type: none; 
+    float: left;
+}
+.playerList ul li{
+    display: block;
+    float: none;
+    height: 50px;
+}
+.playersDP{
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    position: absolute;
+    right: 5px;
+}
+.roomPlayers{
+    margin-top: 5px;
+}
+.timer{
+    float:right;
+    font-weight: bolder;
+}
+.questions{
+    position: relative;
+    top: 20%;
+    text-align: center;
+}
+.options{
+    position: absolute;
+    bottom: 20%;
+}
+.options li{
+    margin-right: 300px;
+    margin-top: 10px;
+}
+.chatInput{
+    width:100%;
+    height: 15%;
+    position: sticky;
+    top: 250px;
+}
+.chattextarea{
+    width: 100%;
+    height: 100%;
+    padding-right: 50px;
+    border-radius:15px;
+    padding-left:15px;
+}
+.sendbutton {
+    margin-left: -51px;
+    height: 100%;
+    width: 50px;
+    background: #2085c9;
+    color: white;
+    border: 0;
+    -webkit-appearance: none;
+    border-bottom-right-radius:15px;
+    border-top-right-radius:15px;
+}
+.messageBoxLayout{
+    height: 50%;
+    /* background-color: red; */
+    
+}
+.userMsg{
+    width: 40%;
+    background-color: orange;
+    border-radius: 5px;
+    float: right;
+    padding: 5px;
+    opacity: 0.7;
+}
+.playersMsg{
+    width: 40%;
+    background-color: pink;
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    opacity: 0.7;
+}
+.chatbox{
+    overflow-y: scroll;
+}
+@media only screen and (max-width: 768px) {
+    .DP{
+        height: 35px;
+        width: 35px;
+    } 
+    .infoBar span{
+        font-size: 10px;
+    }
+    .displayContent{
+        width: 55vw;
+    }
+    .chatbox{
+        width: 40vw;
+    }
+    .options li{
+        margin-right: 300px;
+        margin-top: 5px;
+        font-size: 10px;
+        margin-left: -20px;
+    }
+    .questions{
+        font-size: 10px;
+    }
+    .list-group-item{
+        font-size: 10px;
+        padding: 5px;
+    }
+    .playerList{
+        width: 0px;
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        background-color: white;
+        overflow-y: scroll;
+        transition: 0.5s;
+    }
+    .rankingList{
+        height: 200px;
+        width: 10px;
+        position: absolute;
+        z-index: 2;
+        left: 25px;
+        background-color: white;
+        overflow-y: scroll;
+        transition: 0.5s;
+    }
+    .playestToggle{
+        height: 25px;
+        width: 30px;
+        border-color: 1px solid gray;
+        position: fixed;
+        z-index: 3;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        transform: translate(10px,63px);
+        background-color: gray;
+        line-height: 25px;
+        text-align: center;
+        cursor: pointer; 
+    }
+    .rankListToggle{
+        height: 25px;
+        width: 30px;
+        border-color: 1px solid gray;
+        position: fixed;
+        z-index: 2;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        transform: translate(50px,63px); 
+        background-color: gray;
+        line-height: 25px;
+        text-align: center;
+        cursor: pointer;
+    }
+    .clueList{
+        width: 70vw;
+        margin-left: -5px;
+    }
+    .chattextarea{
+        font-size: 10px;
+    }
+    .chatInput{
+        height:10%;
+    }
+    .sendbutton{
+        width:30px;
+        margin-left:-30px;
+    }
+    *{
+        font-size: 10px;
+    }
+}

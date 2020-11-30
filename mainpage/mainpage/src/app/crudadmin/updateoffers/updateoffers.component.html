@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <title>Bootstrap Example</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <header id="header" class="d-flex align-items-center">
+            <div class="container d-flex align-items-center">
+          
+              <div class="logo mr-auto">
+                <h1 class="text-light" ><a href="index.html"><span>VOIZFONICA</span></a></h1>
+                </div>
+          
+              <nav class="nav-menu d-none d-lg-block">
+                <ul><br>
+                   <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotouserdata()">||  User Data  || </button></li>
+                  <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotooffers()"> Offers  || </button></li>
+                 
+                  <li class="active"> <button id="p" type="button" class="btn btn-link" (click)="gotochat()"> Live Chat || </button></li>
+                  <li class="active"><button id="p" type="button" class="btn btn-link" (click)="gotomain()">  Logout  ||</button></li>
+                    </ul>
+              </nav>
+          
+            </div>
+          </header>
+    <div class="container">
+      <h2>Update Offers</h2>
+      <form [formGroup]="stuent"  (ngSubmit)="upOffer(stuent.value)">
+        <div class="form-group">
+          <label for="email">Id:</label>
+          <input type="text" class="form-control" id="email" [(ngModel)]="id1" value="{{use.id}}"  formControlName="id" placeholder="{{use.id}}" name="email">
+        </div>
+        <div class="form-group">
+          <label for="email">Offer_Id:</label>
+          <input type="text" class="form-control" id="email" value="{{use.offerId}}" [(ngModel)]="offers.offerId" formControlName="email" placeholder="Enter Offer_Id" name="email">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Offer_Name:</label>
+          <input type="text" class="form-control" id="pwd" value="{{use.offerName}}" [(ngModel)]="offers.offerName" formControlName="password" placeholder="Enter Offer_Name" name="pwd">
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label" for="card-holder-name" >Type-</label>
+            <div class="col-sm-9">
+              <select id="z" style="font-size: medium;" value="{{use.type}}" class="browser-default custom-select" formControlName="firstName" name="gender"  [(ngModel)]="offers.type" placeholder="Enter Type" >
+                <option style="font-size: medium;" value="Prepaid">Prepaid</option>
+                <option style="font-size: medium;" value="Postpaid">Postpaid</option>
+                <option style="font-size: medium;" value="Dongle">Dongle</option>
+                <option style="font-size: medium;" value="AddOn">AddOn</option>
+            </select>
+            </div>
+          </div>
+        <div class="form-group">
+          <label for="pwd">Amount:</label>
+          <input type="text" class="form-control" id="pwd" value="{{use.amount}}" [(ngModel)]="offers.amount" formControlName="lastName" placeholder="Enter amount" name="pwd">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Data:</label>
+          <input type="text" class="form-control" id="pwd" value="{{use.data}}" [(ngModel)]="offers.data" formControlName="PhoneNo" placeholder="Enter data" name="pwd">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Validity:</label>
+          <input type="text" class="form-control" id="pwd" value="{{use.validity}}" [(ngModel)]="offers.validity" formControlName="city" placeholder="Enter validity" name="pwd">
+        </div>
+        
+        <button type="submit" class="btn btn-success" [disabled]="stuent.invalid" >Update</button>
+        
+      </form>
+      {{msg}}
+      <br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br>
+      
+    </div>
+    
+    </body>
+    </html>

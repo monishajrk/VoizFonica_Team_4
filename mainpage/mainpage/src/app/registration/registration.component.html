@@ -1,0 +1,95 @@
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<form [formGroup]="student"   (ngSubmit)="registerUser(student.value)">
+ <h4><b> Register here</b></h4>
+  <label>
+    <p class="label-txt">ENTER YOUR EMAIL</p>
+    <input type="email" class="input" [(ngModel)]="user.emailId" formControlName="email" >
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  <label>
+    <p class="label-txt">FIRSTNAME</p>
+    <input type="text" class="input" [(ngModel)]="user.firstName" formControlName="firstName" >
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  <label>
+    <p class="label-txt">LASTNAME</p>
+    <input type="text" class="input" [(ngModel)]="user.lastName" formControlName="lastName" >
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  
+    <label>
+      <p class="label-txt">ENTER YOUR MOBILE NUMBER</p>
+      <input type="text" class="input" [(ngModel)]="user.phoneNo"  formControlName="PhoneNo" >
+      <div class="line-box">
+        <div class="line"></div>
+      </div>
+    </label>
+    <label>
+    
+    <p class="label-txt">ENTER YOUR PASSWORD</p>
+    <input type="password" class="input" [(ngModel)]="user.password" formControlName="password" >
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  <label>
+    
+    <p class="label-txt">CONFIRM PASSWORD</p>
+    <input type="password" class="input" [(ngModel)]="user.password" formControlName="password" >
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  <label>
+    <p class="label-txt">GENDER</p><br>
+    
+    <select id="z" class="browser-default custom-select" name="gender" value="gender" [(ngModel)]="user.gender" formControlName="gender" value="Others">
+      <option value="Female">Female</option>
+      <option value="Male">Male</option>
+      <option value="Others">Others</option>
+  </select>
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  <label>
+    <p class="label-txt">ENTER YOUR CITY</p>
+    <input type="text" class="input" [(ngModel)]="user.city" formControlName="city" >
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  <label>
+    <p class="label-txt">ENTER YOUR PINCODE</p>
+    <input type="text" class="input" [(ngModel)]="user.pincode" formControlName="pincode"  >
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+
+ <label>
+    <p class="label-txt">Terms and Conditions</p>
+    <input type="checkbox" class="input" formControlName="course" required  >
+    
+  </label>
+
+  <button type="submit" id="x" class="btn btn-default" [disabled]="student.invalid">Register</button>&nbsp;
+  <button type="submit" id="x" class="btn btn-default" (click)="gotohome()">Home</button> <br> <br> <h3><b>{{msg}}</b></h3>
+  
+
+</form>
+
+
+
+

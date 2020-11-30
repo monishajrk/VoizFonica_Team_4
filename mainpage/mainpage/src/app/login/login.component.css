@@ -1,0 +1,23 @@
+h5{
+    color: red;
+}
+#g{
+    /* background-color: lightslategrey;
+    width: 100%;
+    height: 100%; */
+    background-image: url("D:\iprimed Project\mainpage\mainpage\src\assets\images\3.jpg");
+    /* background-color: red; */
+    /* background-image: linear-gradient(to right,rgb(85, 84, 83),white); */
+    background-repeat: no-repeat;
+    /* background-position: right; */
+     background-attachment: fixed;
+    background-position: 100% 100%;
+    background-size: cover;
+    
+   
+}
+#s{
+    font-weight: bolder;
+    font-size: 2.0em;
+    
+}

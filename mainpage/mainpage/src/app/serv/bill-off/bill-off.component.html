@@ -1,0 +1,94 @@
+
+    
+
+<div class="container-fluid mt-100 mb-100">
+    <div id="ui-view">
+        <div>
+            <h1 style="text-align: center;background-color: rgb(216, 74, 74);"><strong>VOIZFONICA INVOICE</strong></h1><br><br>
+            <div class="card" style="font-size: larger;">
+                <div class="card-header"> Invoice<strong>#{{pla.id}}</strong>
+                    <!-- <div class="pull-right"> <a class="btn btn-sm btn-info" href="#" data-abc="true"><i class="fa fa-print mr-1"></i> Print</a> <a class="btn btn-sm btn-info" href="#" data-abc="true"><i class="fa fa-file-text-o mr-1"></i> Save</a> -->
+                    <!-- </div> -->
+                </div>
+                <div class="card-body">
+                    <div class="row mb-4">
+                        <div class="col-sm-4">
+                            <h6 class="mb-3">From:</h6>
+                            <div><strong>VOIZFONICA</strong></div>
+                            <div>546 Aston Avenue</div>
+                            <div>Bangalore, Karnataka</div>
+                            <div>Email: voizfonica.supp@gmail.com</div>
+                            <div>Phone: +8801683615582</div>
+                        </div>
+                        <div class="col-sm-4">
+                            <h6 class="mb-3">To:</h6>
+                            <div><strong>{{use.firstName}}</strong></div>
+                            <div><strong>{{use.lastName}}</strong></div>
+                            <div>{{use.city}}</div>
+                            <div>Email: {{use.emailId}}</div>
+                            <div>Phone: {{use.phoneNo}}</div>
+                        </div>
+                        <div class="col-sm-4">
+                            <h6 class="mb-3">Details:</h6>
+                            <div>Invoice<strong> #{{pla.id}}</strong></div>
+                            <div><strong>{{pla.planId}}</strong></div>
+                            <div>{{pla.date}}</div>                            
+                            <div>{{pla.type}}</div>
+                            
+                        </div>
+                    </div>
+                    <div class="table-responsive-sm">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th class="center">#</th>
+                                    <th>Item</th>
+                                    <th>Description</th>
+                                    <!-- <th class="center">UNIT</th> -->
+                                    <th class="right">COST</th>
+                                    <!-- <th class="right">Total</th> -->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="center">{{pla.id}}</td>
+                                    <td class="left">{{pla.planId}}</td>
+                                    <td class="left">{{pl.offerName}}  {{pla.type}}</td>
+                                    <!-- <td class="center">5</td> -->
+                                    <td class="right">{{pla.amount}}</td>
+                                    <!-- <td class="right">$4500</td> -->
+                                </tr>
+                                
+                              
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-5"><strong> INVOICE TERMS AND CONDITIONS </strong><br> The paid amount is not refundable</div>
+                        <div class="col-lg-4 col-sm-5 ml-auto">
+                            <table class="table table-clear">
+                                <tbody>
+                                    
+                                   
+                                    <tr>
+                                        <td class="left"><strong>Total</strong></td>
+                                        <td class="right"><strong>{{pla.amount}}</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- <div class="pull-right"> <a class="btn btn-sm btn-success" href="#" data-abc="true"><i class="fa fa-paper-plane mr-1"></i> Proceed to payment</a>
+                            </div> -->
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button class="btn btn-danger" onclick="window.print()" >Save</button>&nbsp;<button class="btn btn-danger" (click)="gotohome()" >Go Home</button>
