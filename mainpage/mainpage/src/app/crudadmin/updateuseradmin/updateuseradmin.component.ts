@@ -33,7 +33,7 @@ export class UpdateuseradminComponent implements OnInit {
       email:new FormControl("",Validators.compose(
         [
           Validators.required,
-          Validators.pattern('^[a-zA-Z0-9_]+@gmail+.com+$')
+          Validators.pattern('^[a-zA-Z]+[a-zA-Z0-9_]+@gmail+.com+$')
         ]
       )),
       password:new FormControl("",Validators.compose(
@@ -46,8 +46,8 @@ export class UpdateuseradminComponent implements OnInit {
       )),
       id:new FormControl("",Validators.compose(
         [
-          Validators.required
-          // Validators.pattern("^[0-9]{6}$")
+          Validators.required,
+          Validators.pattern("^[0-9]+$")
         ]
       )),
       firstName:new FormControl("",Validators.compose(

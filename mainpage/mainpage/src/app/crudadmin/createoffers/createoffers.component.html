@@ -11,21 +11,21 @@
 		<div class="form_main">
                 <h4 class="heading" style="font-size: x-large;"><strong>Create </strong> Offers <span></span></h4>
                 <div class="form" style="width: 1000px;">
-                <form action="contact_send_mail.php" method="post" id="contactFrm" name="contactFrm"  (ngSubmit)="registerOff()">
-                    <input type="text" required="" placeholder="Enter Offer_Id" value="" [(ngModel)]="user.offerId" name="name" class="txt">
-                    <input type="text" required="" placeholder="Enter Offer_Name" value="" [(ngModel)]="user.offerName" name="mob" class="txt">
-                    <select id="z" style="font-size: medium;" class="browser-default custom-select" [(ngModel)]="user.type" name="gender"   placeholder="Enter Type" >
+                <form [formGroup]="stent"   (ngSubmit)="registerOff(stent.value)">
+                    <input type="text" required="" placeholder="Enter Offer_Id" formControlName="email" value="" [(ngModel)]="user.offerId" name="name" class="txt">
+                    <input type="text" required="" placeholder="Enter Offer_Name" value="" formControlName="password" [(ngModel)]="user.offerName" name="mob" class="txt">
+                    <select id="z" style="font-size: medium;" class="browser-default custom-select" formControlName="firstName" [(ngModel)]="user.type" name="gender"   placeholder="Enter Type" >
                         <option style="font-size: medium;" value="Prepaid">--Enter Type--</option>
                         <option style="font-size: medium;" value="Prepaid">Prepaid</option>
                         <option style="font-size: medium;" value="Postpaid">Postpaid</option>
                         <option style="font-size: medium;" value="Dongle">Dongle</option>
                         <option style="font-size: medium;" value="AddOn">AddOn</option>
                     </select>
-                    <input type="text" required="" placeholder="Enter amount" [(ngModel)]="user.amount" value="" name="email" class="txt">
-                    <input type="text" required="" placeholder="Enter data" value="" [(ngModel)]="user.data" name="email" class="txt">
-                    <input type="text" required="" placeholder="Enter validity" value="" [(ngModel)]="user.validity" name="email" class="txt">
+                    <input type="text" required="" placeholder="Enter amount" formControlName="lastName" [(ngModel)]="user.amount" value="" name="email" class="txt">
+                    <input type="text" required="" placeholder="Enter data" formControlName="PhoneNo" value="" [(ngModel)]="user.data" name="email" class="txt">
+                    <input type="text" required="" placeholder="Enter validity" formControlName="city" value="" [(ngModel)]="user.validity" name="email" class="txt">
                     
-                	 <input type="submit" value="Create" name="submit" class="txt2">
+                    <button type="submit" class="btn btn-dark" [disabled]="stent.invalid" >Create</button>
                 </form>
                 {{msg}}
             </div>

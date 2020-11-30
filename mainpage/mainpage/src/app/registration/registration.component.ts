@@ -26,7 +26,7 @@ msg="";
         [
           Validators.required,
           // Validators.pattern('^[a-zA-Z0-9_]+@[a-zA-Z]+.[a-zA-Z]+$')
-          Validators.pattern('^[a-zA-Z0-9_]+@gmail+.com+$')
+          Validators.pattern('^[a-zA-Z]+[a-zA-Z0-9_]+@gmail+.com+$')
         ]
       )),
       password:new FormControl("",Validators.compose(

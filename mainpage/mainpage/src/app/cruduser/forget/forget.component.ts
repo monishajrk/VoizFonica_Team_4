@@ -33,7 +33,7 @@ export class ForgetComponent implements OnInit {
       email:new FormControl("",Validators.compose(
         [
           Validators.required,
-          Validators.pattern('^[a-zA-Z0-9_]+@gmail+.com+$')
+          Validators.pattern('^[a-zA-Z]+[a-zA-Z0-9_]+@gmail+.com+$')
         ]
       )),
       password:new FormControl("",Validators.compose(

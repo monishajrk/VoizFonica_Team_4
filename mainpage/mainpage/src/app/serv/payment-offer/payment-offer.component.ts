@@ -6,6 +6,8 @@ import { Plans } from 'src/app/plans';
 import { RegistrationService } from 'src/app/registration.service';
 import { Services } from 'src/app/services';
 import { User } from 'src/app/user';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-payment-offer',
@@ -21,6 +23,7 @@ export class PaymentOfferComponent implements OnInit {
   ser= new Services;
   msg="";
   mail:string;
+  stuu;
   constructor(private _service:RegistrationService,private _data:DataService,private _router : Router,private _activatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -41,11 +44,98 @@ export class PaymentOfferComponent implements OnInit {
         this.msg="some error occured";},
       
     )
-  }
- 
-paynow(id:string){
-  
 
+    this.stuu=new FormGroup({
+     
+      email:new FormControl("",Validators.compose(
+        [
+          Validators.required,
+          Validators.pattern('^[a-zA-Z]+[a-zA-Z0-9_]+@gmail+.com+$')
+        ]
+      )),
+      phoneNo:new FormControl("",Validators.compose(
+        [
+          Validators.required,
+          
+          Validators.pattern("^[0-9]{10}$")
+         
+        ]
+      )),
+     
+      planId:new FormControl("",Validators.compose(
+        [
+          Validators.required,
+          Validators.pattern('^[a-zA-Z]+[a-zA-Z0-9]+$')
+         
+        ]
+      )),
+     
+      amount:new FormControl("",Validators.compose(
+        [
+          Validators.required,
+          Validators.pattern('^[0-9]+$')
+        ]
+      )),
+      cardname:new FormControl("",Validators.compose(
+        [
+          Validators.required,
+          Validators.pattern('^[a-zA-Z]+$')
+         
+        ]
+      )),
+      year:new FormControl("",Validators.compose(
+        [
+          Validators.required
+          
+         
+        ]
+      )),
+
+      month:new FormControl("",Validators.compose(
+        [
+          Validators.required
+          
+         
+        ]
+      )),
+      type:new FormControl("",Validators.compose(
+        [
+          Validators.required
+          
+         
+        ]
+      )),
+      cat:new FormControl("",Validators.compose(
+        [
+          Validators.required
+          
+         
+        ]
+      )),
+      
+      cardnumber:new FormControl("",Validators.compose(
+        [
+          Validators.required,
+          Validators.pattern("^[0-9]{16}$")
+         
+        ]
+      )),
+      cvv:new FormControl("",Validators.compose(
+        [
+          Validators.required,
+          Validators.pattern("^[0-9]{3}$")
+        ]
+      ))
+      
+    })
+  
+  }
+  
+ 
+paynow(obj,id:string){
+  
+  console.log("ReactiveForms Module");
+  console.log(obj);
   this._service.payOfferFromRemote( this.services).subscribe(
     data=>{this.ser=data
       console.log("response received");

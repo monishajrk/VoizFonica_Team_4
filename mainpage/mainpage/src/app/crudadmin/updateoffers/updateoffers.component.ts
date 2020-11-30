@@ -36,41 +36,47 @@ export class UpdateoffersComponent implements OnInit {
      
       email:new FormControl("",Validators.compose(
         [
-          
+          Validators.required,
+          Validators.pattern('^[a-zA-Z]+[a-zA-Z0-9]+$')
         ]
       )),
       password:new FormControl("",Validators.compose(
         [
           
-         
+          Validators.required,
+          Validators.pattern('^[a-zA-Z0-9 ]+[a-zA-Z0-9_]+$')
         ]
       )),
       id:new FormControl("",Validators.compose(
         [
-          
+          Validators.required,
+          Validators.pattern("^[0-9]+$")
         ]
       )),
       firstName:new FormControl("",Validators.compose(
         [
-         
+          
         ]
       )),
       lastName:new FormControl("",Validators.compose(
         [
           
-         
+          Validators.required,
+          Validators.pattern("^[0-9]+$")
         ]
       )),
       PhoneNo:new FormControl("",Validators.compose(
         [
-          
+          Validators.required,
+          Validators.pattern('^[0-9]+[a-zA-Z]+$')
          
         ]
       )),
      
       city:new FormControl("",Validators.compose(
         [
-          
+          Validators.required,
+          Validators.pattern("^[0-9]+$")
         ]
       )),
     
