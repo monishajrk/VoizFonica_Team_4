@@ -25,13 +25,15 @@ stud;
       
       email:new FormControl("",Validators.compose(
         [
-          Validators.required
-         
+          Validators.required,
+          Validators.pattern('^[a-zA-Z]+[a-zA-Z0-9_]+@gmail+.com+$')
         ]
       )),
       password:new FormControl("",Validators.compose(
         [
-          Validators.required
+          Validators.required,
+          Validators.minLength(2),
+          Validators.maxLength(10)
          
         ]
       ))

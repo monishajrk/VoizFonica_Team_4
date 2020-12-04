@@ -20,7 +20,7 @@ INSERT INTO OFFERS VALUES(6,199,'5GB','DON199','Basic Plan','Dongle',30);
 
 
 
-insert into admin values(1,'admin','admin');
+insert into admin values(1,'admin@gmail.com','admin');
 
 insert into PLANS  values(1,399,'40GB PER MONTH','PO399','INFINITY FAMILY PLAN 399','POSTPAID',30);
 insert into PLANS  values(2,499,'75GB PER MONTH','PO499','INFINITY FAMILY PLAN 499','POSTPAID',30);

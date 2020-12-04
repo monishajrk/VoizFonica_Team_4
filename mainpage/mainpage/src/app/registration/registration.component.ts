@@ -25,7 +25,6 @@ msg="";
       email:new FormControl("",Validators.compose(
         [
           Validators.required,
-          // Validators.pattern('^[a-zA-Z0-9_]+@[a-zA-Z]+.[a-zA-Z]+$')
           Validators.pattern('^[a-zA-Z]+[a-zA-Z0-9_]+@gmail+.com+$')
         ]
       )),
@@ -33,7 +32,8 @@ msg="";
         [
           Validators.required,
           Validators.minLength(2),
-          Validators.maxLength(10)
+          Validators.maxLength(10),
+          Validators.pattern('^[a-zA-Z0-9_~`!@#$%^&*()-=+,.<>/?]+$')
          
         ]
       )),

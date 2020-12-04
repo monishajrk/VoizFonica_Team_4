@@ -22,7 +22,8 @@ export class AdminloginComponent implements OnInit {
       
       email:new FormControl("",Validators.compose(
         [
-          Validators.required
+          Validators.required,
+          Validators.pattern('^[a-zA-Z]+[a-zA-Z0-9_]+@gmail+.com+$')
          
         ]
       )),
